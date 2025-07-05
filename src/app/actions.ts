@@ -18,7 +18,11 @@ export async function convertPdfToMarkdown(data: { pdfDataUri: string; filename:
       filename: validatedData.filename,
     });
 
-    return { success: true, markdown: result.markdownText };
+    return {
+      success: true,
+      markdown: result.markdownText,
+      images: result.images
+    };
   } catch (error) {
     console.error('Conversion failed:', error);
     if (error instanceof z.ZodError) {

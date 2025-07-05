@@ -1,3 +1,6 @@
+/* Import highlight.js GitHub theme */
+@import 'highlight.js/styles/github.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
